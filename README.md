@@ -11,6 +11,9 @@ Demo - http://unit-dynamics.github.io/portfolio-v1/dist/
 - ScrollMagic.js
 
 # Install
+
+This was setup using foundation CLI 6
+
 - Clone Repo
 - Install Depends.
   - run `npm install`
