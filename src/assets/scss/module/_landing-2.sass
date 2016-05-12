@@ -1,0 +1,27 @@
+.landing
+	color: white
+	min-height: 100%
+	height: 100%
+	padding: 20px 0
+	background-color: rgba(0, 0, 0, 0.39)
+	background-image: url("/assets/img/landing.jpg")
+	background-position: 50% 50%
+	//background-size: cover
+	background-attachment: fixed
+
+	&__overlay
+		background-color: rgba(7, 66, 127, 0.37)
+		min-height: 110%
+
+	&__cta
+		top: 40%
+		z-index: 0
+		color: white
+		text-align: center
+		position: fixed
+		left: 50%
+		transform: translate(-50%, 0) // Keeps the Div centered
+
+		.tag
+			font-weight: 700
+			color: $accent-color

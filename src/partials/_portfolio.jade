@@ -1,0 +1,80 @@
+// Mixins
+//-------------
+
+// Creates portfolio cards
+mixin project(orientation, name, img, info, links, langs)
+
+	section: .row.align-center.portfolio-card
+		.small-12.medium-12.large-4.column
+			.portfolio-card__img-container
+				img.portfolio-card__img(src="#{img}", alt="")
+
+		// Orientation will align the text on the right or left of the img
+		.small-12.medium-12.large-6.column(class="#{orientation==='left' ? 'orient-left' : ''}")
+			.portfolio-card__info-container
+				h1.portfolio-card__project-name #{name}
+				
+				h5
+					each lang in langs
+						<span>#{lang}</span>
+
+				p  #{info}
+
+				.portfolio-card__btn-container
+					each link in links
+						a.button.small(href="#{link.url}") #{link.name}
+
+
+// Content
+//-------------
+
+// Portfolio Section
+section: #portfolio 
+
+	// Portfolio Header
+	section: .row
+		.large-12.columns.text-center
+			h1.sectionTitle Portfolio
+			p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi architecto laboriosam expedita libero, officia ipsum inventore, ullam cumque eligendi quas magnam esse fuga! Ipsam quibusdam animi, ipsum facere dolorem aperiam!
+
+
+	// Portfolio Cards
+	+project(
+		'right',
+		'Yor Health',
+		'/assets/img/yorhealth-ps.jpg',
+		' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae a, laudantium repellat voluptatibus animi dolore rem obcaecati eligendi ea quasi repellendus odit dicta delectus harum fugit magnam voluptatem architecto facilis.',
+		[ {name: 'View Site', url: 'http://www.yorhealth.com/default.aspx?localetype=1033'}],
+		[	'HTML',
+			'CSS',
+			'Jquery',
+			'ASP'])
+
+	.devider
+
+	+project(
+	'left',
+	'Portfolio',
+	'/assets/img/portfolio-ps.jpg',
+	' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae a, laudantium repellat voluptatibus animi dolore rem obcaecati eligendi ea quasi repellendus odit dicta delectus harum fugit magnam voluptatem architecto facilis.',
+	[	{name: 'Source Code', url: 'http://gitlab.com'},
+		{name: 'Demo', url: 'http://google.com'}],
+	[	'HTML5',
+		'CSS3',
+		'Jquery',
+		'Foundation',
+		'ScrollMagic'
+		])
+
+	.devider
+
+	+project(
+	'right',
+	'Portfolio',
+	'/assets/img/pic3.jpg',
+	' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae a, laudantium repellat voluptatibus animi dolore rem obcaecati eligendi ea quasi repellendus odit dicta delectus harum fugit magnam voluptatem architecto facilis.',
+	[	{name: 'Source Code', url: 'http://gitlab.com'},
+		{name: 'Demo', url: 'http://google.com'}],
+	[	'HTML5',
+		'CSS3',
+		'Jquery',])

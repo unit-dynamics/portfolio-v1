@@ -1,0 +1,251 @@
+// Theme Stylings
+//--------------
+
+.button, .button:focus,
+	background-color: rgba(6, 6, 6, 0.67)
+	&:hover
+		background-color: rgba(6, 6, 6, 0.60)
+	margin: 10px
+
+.button 
+	display: inline-block
+	vertical-align: middle
+	transform: translateZ(0)
+	backface-visibility: hidden
+	position: relative
+	border: 1px solid white
+
+.button:before 
+	content: ''
+	position: absolute
+	border-bottom:  4px solid rgba(0, 0, 0, 0)
+	right: 0
+	bottom: 0
+	left: 0
+	transition-duration: 0.3s
+	transition-property: bottom, border-bottom
+
+.button:hover:before
+	bottom: -9px
+	border-bottom: red solid 4px
+
+
+h1
+	font-family: 'Cinzel', serif !important
+
+i
+	color: red
+
+footer, a
+	font-family: 'Cinzel', sans-serif
+
+
+//############
+// Header 
+//############
+
+
+// Navigation
+//------------
+
+.menu-container
+	background-color: black
+	color: white
+	width: 100%
+	border-top: 2px solid red
+	text-align: center
+	position: fixed
+	top: 0%
+	z-index: 3
+	ul
+		display: inline-block
+		a 
+			color: white
+			text-decoration: none
+			&:hover
+				color: red
+
+
+
+//############
+// Landing Page
+//############
+
+
+// Landing Page Img
+//------------
+
+.landing-wrapper
+	z-index: -3
+	border-bottom: 2px solid red
+	background-image: url("/assets/img/landing.jpg")
+	background-size: cover
+	height: 100vh
+	width: 100vw
+	position: fixed
+	top: 0px
+	left: 0px
+
+	
+.landing-cta
+	top: 40%
+	z-index: 0
+	color: white
+	text-align: center
+	position: fixed;
+	left: 50%;
+	transform: translate(-50%, 0) //This keeps the div centered at dif. resolutions 
+	i
+		color: red
+
+.landing-overlay
+	background-color: rgba(7, 66, 127, 0.37)
+	height: 100vh
+
+
+
+
+
+//############
+// Portfolio
+//############
+
+
+// Portfolio
+//----------
+
+.work
+	margin-top: 99.9vh
+	background-color: white
+	box-shadow: 0 -10px 17px 0 rgba(0,0,0,0.6)
+	position: relative
+	border-top: 2px solid red
+
+#portfolio
+	padding: 20px 0 60px 0
+	img
+		box-shadow: 4px 8px 26px 1px rgba(0, 0, 0, 0.45)
+		border-radius: 10px
+		transition: filter 1s
+		filter: grayscale(100%)
+	.row:hover img
+		filter: grayscale(0%)
+
+.devider
+	width: 25%
+	margin: 40px auto
+	border-bottom: 1px dashed red
+	opacity: 0
+
+.accent
+	color: red
+
+.tag
+	font-weight: 700
+
+.actions
+	margin-left: 200px
+	overflow: hidden
+	opacity: 0
+	a
+		margin-right: 10px
+
+.proHeader:after
+	display: block
+	width: 0
+	height: 7px
+	background-color: red
+	content: ""
+	transition: width 1s
+
+.row:hover .proHeader:after
+	width: 40%
+
+
+// Add lines before and after h1 tags
+.sectionTitle::before, .sectionTitle::after
+	content: ""
+	width: 85px
+	height: 2px
+	background-color: black
+	left: 0px
+	top: -12px
+	display: inline-block 
+	position: relative
+	margin: 0 10px
+
+//############
+// Resume
+//############
+
+
+// Resume
+//----------
+
+
+#resume
+	color: white
+	padding: 20px 0
+	background-color: rgba(0, 0, 0, 0.39)
+	background-image: url("/assets/img/hiking.jpg")
+	background-position: 50% 50%
+	background-size: cover
+	background-attachment: fixed
+	h1:after, h1:before
+		background-color: white
+
+.resume-cta
+	padding: 40px 30px
+	margin-bottom: 40px
+	border: 2px solid white
+
+	
+
+
+//############
+// About
+//############
+
+// About
+//----------
+
+#about
+	background-color: white
+	padding: 20px
+
+//############
+// Footer
+//############
+
+
+// Footer
+//----------
+
+.ft-container
+	background-color: black
+	border-top: 2px solid red
+	color: white
+	p
+		padding-top: 5px
+		margin-top: 12px
+		line-height: 16px
+		.ft-name-date
+			font-size: 10px
+	i
+		position: relative
+
+.icn-heart, .icn-mountain
+	position: absolute
+	top: -17px
+	left: -14px
+	opacity: 0
+	transition: top 0.5s, opacity 0.3s
+
+	
+
+i:hover span
+	opacity: 1
+	top: -12px
+
+.orient-left
+	order: -1

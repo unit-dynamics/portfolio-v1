@@ -1,0 +1,78 @@
+#portfolio
+	padding: $section-padding
+	background-color: white
+
+.portfolio-card
+	padding: 10px 0
+
+	&__img
+		// box-shadow: 4px 8px 26px 1px rgba(0, 0, 0, 0.45)
+		border-radius: 4px
+		transition: all 1s
+		filter: grayscale(100%)
+
+	&:hover img
+		filter: grayscale(0%)
+		box-shadow: 4px 8px 26px 1px rgba(0, 0, 0, 0.45)
+
+
+	&__btn-container
+		margin-left: 200px
+		overflow: hidden
+		opacity: 0
+
+	a
+		margin-right: 10px
+		border-color: #000
+
+
+	&__project-name:after
+		width: 0
+		height: 3px
+		display: block
+		background-color: red
+		content: ""
+		transition: width 1s
+
+
+	// Hover activates redline animation under Project name
+	&:hover .portfolio-card__project-name:after
+		width: 40%
+
+	span
+		color: #8a8a8a
+
+		&:after
+			content: '-'
+			padding: 0 0.2rem
+			color: $accent-color
+
+		&:last-child:after
+			content: ''
+
+
+//- Media Queries
+//------------------
+
+@media (max-width: 900px)
+
+	.portfolio-card
+
+		&__info-container
+			padding-top: 20px
+
+		&__btn-container
+			text-align: center
+		
+		&__img-container
+			text-align: center
+
+		&__img
+			filter: none
+			width: 250px
+
+	.orient-left
+		order: 1
+	
+	.devider
+		margin: 20px auto

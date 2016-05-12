@@ -1,0 +1,37 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JTafoya's Portfolio</title>
+    <link rel="shortcut icon" href="{{root}}assets/img/mountains-2.ico" type="image/x-icon">
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css">
+  </head>
+  <body>
+    
+
+    {{> _header}}
+    
+    {{!-- Ancher point for the Home link --}}
+    <div id="landing"></div>
+    {{> _landing}}
+
+    <div class="work">
+    
+      {{> _portfolio}}
+      {{> _resume}}
+      {{> _about}}
+      {{> _footer}}
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.1/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.1/plugins/animation.gsap.js"></script>
+    <script src="{{root}}assets/js/app.js"></script>
+  </body>
+</html>

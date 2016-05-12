@@ -1,0 +1,66 @@
+#about
+	background-color: white
+	padding: $section-padding
+
+.about
+
+	&__front-end-header
+		border-bottom: solid 2px $accent-color
+		width: 70%
+		margin: 20px auto
+
+	&__front-end-lists-container
+		margin-top: 40px
+
+	&__front-end-lists
+		margin-left: 36%
+
+	&__front-end-section
+		// border-bottom: solid 2px $accent-color
+		// width: 47%
+		margin: 25px auto
+		text-align: center
+		&:after
+			content: ''
+			display: block
+			height: 2px
+			background-color: $accent-color
+			width: 170px
+			margin: 0 auto
+			position: relative
+			bottom: -5px
+
+
+	ul
+		list-style-type: none
+
+	
+	&__front-end-list__entry
+		margin-bottom: 13px
+		img
+			height: 32px
+			width: 32px
+		span
+			padding-left: 10px
+			font-weight: 700
+			
+
+	h1 + img
+		width: 150px
+		height: 150px
+		border-radius: 50%
+		margin-bottom: 30px
+
+//- Iphone 6+ breakpoint
+@media (max-width: 768px)
+
+	.about
+
+		&__front-end-lists
+			margin-left: 22%
+
+		&__front-end-section:after
+			width: 135px
+
+		&__front-end-lists-container
+			margin-top: 0px

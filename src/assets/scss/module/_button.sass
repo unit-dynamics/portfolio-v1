@@ -1,0 +1,28 @@
+.button, .button:focus,
+  background-color: rgba(6, 6, 6, 0.67)
+  margin: 10px
+
+  &:hover
+    background-color: rgba(6, 6, 6, 0.60)
+
+.button 
+  display: inline-block
+  vertical-align: middle
+  transform: translateZ(0)
+  backface-visibility: hidden
+  position: relative
+  border: 1px solid white
+
+  &:before 
+    content: ''
+    position: absolute
+    border-bottom:  3px solid rgba(0, 0, 0, 0)
+    right: 0
+    bottom: 0
+    left: 0
+    transition-duration: 0.3s
+    transition-property: bottom, border-bottom
+
+  &:hover:before
+    bottom: -9px
+    border-bottom: 3px solid $accent-color
